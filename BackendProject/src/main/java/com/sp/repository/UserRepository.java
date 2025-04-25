@@ -2,8 +2,6 @@ package com.sp.repository;
 
 import com.sp.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
 import java.util.Optional;
 
 
@@ -32,4 +30,4 @@ public interface UserRepository extends JpaRepository<User, Long> {
      * Helps in avoiding duplicate emails during registration.
      */
     boolean existsByEmail(String email);
-}
+} 

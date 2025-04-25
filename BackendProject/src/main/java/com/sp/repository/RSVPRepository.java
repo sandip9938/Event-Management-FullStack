@@ -4,7 +4,6 @@ import com.sp.model.RSVP;
 import com.sp.model.Event;
 import com.sp.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 

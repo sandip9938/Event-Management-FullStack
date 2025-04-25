@@ -2,11 +2,7 @@ package com.sp.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
-import io.jsonwebtoken.JwtParser;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.MalformedJwtException;
-import io.jsonwebtoken.SignatureException;
-import io.jsonwebtoken.UnsupportedJwtException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
@@ -76,9 +72,9 @@ public class JwtUtil {
      */
     private Claims extractAllClaims(String token) {
         try {
-            // ✅ Parse and validate token using the signing key
-            return ((JwtParser) Jwts.parser()
-                    .setSigningKey(getSigningKey()))
+            return Jwts.parserBuilder()
+                    .setSigningKey(getSigningKey())
+                    .build()
                     .parseClaimsJws(token)
                     .getBody();
         } catch (ExpiredJwtException e) {

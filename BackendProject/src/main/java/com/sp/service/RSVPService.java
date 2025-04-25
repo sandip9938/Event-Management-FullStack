@@ -5,7 +5,6 @@ import com.sp.model.Event;
 import com.sp.model.RSVP;
 import com.sp.model.User;
 import com.sp.repository.RSVPRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +14,6 @@ public class RSVPService {
 
     private final RSVPRepository rsvpRepository;
 
-    @Autowired
     public RSVPService(RSVPRepository rsvpRepository) {
         this.rsvpRepository = rsvpRepository;
     }

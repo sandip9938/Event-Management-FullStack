@@ -2,6 +2,7 @@ package com.sp.security;
 
 import com.sp.model.User;
 import com.sp.repository.UserRepository;
+
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
